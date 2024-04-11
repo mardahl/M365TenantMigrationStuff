@@ -55,6 +55,11 @@ timeout /T 5 /nobreak>nul
 @ECHO Resetting Azure AD access broker
 @ECHO ******************************************
 @rename %localappdata%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy.old
+@rename %LocalAppData%\Packages\MSTeams_8wekyb3d8bbwe %LocalAppData%\Packages\MSTeams_8wekyb3d8bbwe.old
+@rename %LocalAppData%\Microsoft\OneAuth %LocalAppData%\Microsoft\OneAuth.old
+@rename %LocalAppData%\Microsoft\TokenBroker %LocalAppData%\Microsoft\TokenBroker.old
+@rename %LocalAppData%\Microsoft\IdentityCache %LocalAppData%\Microsoft\IdentityCache.old
+
 
 echo done >> %USERPROFILE%\MigrationDone.txt
 msg "%username%" Migration fix done
